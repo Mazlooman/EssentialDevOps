@@ -6,14 +6,14 @@
 
 ## Proxy Git
 ### proxy setting
-git config --global http.proxy http://141.53.67.240:9090
+git config --global http.proxy http://141.53.67.240:9090    
 git config --global https.proxy http://141.53.67.240:9090
 
 ### Remove proxy
 git config --global --unset http.proxy
 git config --global --unset https.proxy
 
-## Connect Git
+## Connect to Git
 ### Method 1: Create SSH-keys and config Github
 **SSH Keys**  
 Create Public and Private Key
@@ -49,7 +49,7 @@ Set URL
 `git add File.txt`
 ### Commit Tracking Files and Folders
 `git commit -m "Commit message"`   
-> :memo: **Note:** Staging && Commit    
+> :memo: **Note:** Staging current tracking files && Commit it     
 `git commit -a -m "Commit message"`
 ### Push Repository to Github/GitLab
 `git push -u origin main`
@@ -58,6 +58,19 @@ if already exist repository
 `git clone https://github.com/mazlooman/Git --config "http.proxy=http://webgateci.med.uni-greifswald.de:9090"`
 ### Check Status Files and Directory   
 `git status `
+
+## Additional Operation
+### ignore files tracking
+```
+nano .gitignore 
+and then add list of files or format 
+f.e
+debug.log
+*.pub
+```
+then `git add .gitignore`
+and afterthat `git commit -m "Add .gitignore file"`
+
 
 
 
