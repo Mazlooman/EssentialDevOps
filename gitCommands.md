@@ -6,8 +6,8 @@
 
 ## Proxy Git
 ### proxy setting
-git config --global http.proxy http://141.53.67.240:9090    
-git config --global https.proxy http://141.53.67.240:9090
+git config --global http.proxy  <Address:Port>
+git config --global https.proxy  <Address:Port>
 
 ### Remove proxy
 git config --global --unset http.proxy
@@ -58,7 +58,7 @@ Set URL
 `git push -u origin main`
 ### Clone Repository from GitHub/GitLab
 if already exist repository   
-`git clone https://github.com/mazlooman/Git --config "http.proxy=http://webgateci.med.uni-greifswald.de:9090"`
+`git clone https://github.com/mazlooman/Git --config "http.proxy=http://<Address:Port>"`
 ### Restore from Remote Repository 
 `git restore <file>`   
 `git restore .`   
