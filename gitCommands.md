@@ -45,8 +45,11 @@ Set URL
 ### Remove Remote connectivity Repository 
 `git remote remove origin`
 ## Operations
+### Check Status Files and Directory   
+`git status `
 ### Staging Files and folder 
 `git add File.txt`
+`git add .`
 ### Commit Tracking Files and Folders
 `git commit -m "Commit message"`   
 > :memo: **Note:** Staging current tracking files && Commit it     
@@ -56,11 +59,12 @@ Set URL
 ### Clone Repository from GitHub/GitLab
 if already exist repository   
 `git clone https://github.com/mazlooman/Git --config "http.proxy=http://webgateci.med.uni-greifswald.de:9090"`
-### Check Status Files and Directory   
-`git status `
-
+### Restore from Remote Repository 
+`git restore <file>`   
+`git restore .`   
+`git reset --hard origin/main`
 ## Additional Operation
-### ignore files tracking
+### Ignore files tracking
 ```
 nano .gitignore 
 and then add list of files or format 
@@ -71,7 +75,19 @@ debug.log
 then `git add .gitignore`
 and afterthat `git commit -m "Add .gitignore file"`
 
+## Logs Operation
+### history commits 
+`git log`   
+`git log --oneline`   
 
+Rendered Output: 
+
+```
+$ git log --oneline
+4c834bb (HEAD -> main, origin/main) commit files
+98df358 second commit
+b98cfe3 initial Commit
+```
 
 
 
